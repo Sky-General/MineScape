@@ -17,8 +17,7 @@ public class Main extends JavaPlugin implements Listener {
      
     public void onEnable() {
     	logger.info("[" + pdfFile.getName() + "] v" + pdfFile.getVersion() + " is now enabled!");
-    	PluginManager pm = getServer().getPluginManager();
-    	pm.registerEvents(new ListenerClass(), this);
+    	new ListenerClass(this);
     }
     	
     public void onDisable() {
@@ -60,19 +59,11 @@ public class Main extends JavaPlugin implements Listener {
 	    	  player.setHealth(10);
 	    	  player.setFoodLevel(10);
 	    	  player.setFireTicks(0);
-	    	  player.sendMessage(ChatColor.RED + "Shmeg");
 	    	 
 	      }
 		      	 
-// Commands Above This Line ------------
+/* Commands Above This Line --------------------- */
 
-// Events Below Here -------------
-
-
-
-
-
-// Nothing Below Here Except return statements ----------------
 		return false;
 	}
 }
